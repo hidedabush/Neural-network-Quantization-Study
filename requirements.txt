@@ -1,0 +1,23 @@
+# ── Core ML ───────────────────────────────────────────────────────────────────
+# Install PyTorch with CUDA separately (see setup.sh — version-locked to your CUDA):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+torch>=2.0.0
+torchvision>=0.15.0
+
+# ── Data and analysis ─────────────────────────────────────────────────────────
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0       # for metrics (accuracy, confusion matrix)
+
+# ── Visualization ─────────────────────────────────────────────────────────────
+matplotlib>=3.7.0
+seaborn>=0.12.0            # nicer default style for paper figures
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+tqdm>=4.65.0               # progress bars for long calibration / eval passes
+pyyaml>=6.0                # config files for experiment parameters
+
+# ── Optional: TensorRT Python bindings ────────────────────────────────────────
+# Install from NVIDIA's developer portal — not on PyPI.
+# Follow: https://docs.nvidia.com/deeplearning/tensorrt/install-guide/
+# After installing, verify with: python -c "import tensorrt; print(tensorrt.__version__)"
